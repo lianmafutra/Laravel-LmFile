@@ -27,6 +27,7 @@ use Illuminate\Http\Request;
  public function store(UserRequest $request)
    {
 
+  $user = User::find(1);
   $user->addFile($request->file_profile)
          ->field("file_profile") // name field/coloumn in table Database 
          ->path("profile") // path store file in storage 
