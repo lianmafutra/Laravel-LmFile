@@ -66,8 +66,19 @@ User::find(auth()->user()->id)->field('foto')->getThumb()
 
 //Access File Original
 User::find(auth()->user()->id)->field('foto')->getFile()
-
 // http://laravel-starter.test/storage/2023/08/profile/fotoku.png
+
+// Access Multiple
+User::find(auth()->user()->id)->field('foto')->getThumbs()
+User::find(auth()->user()->id)->field('foto')->getFiles()
+
+Illuminate\Support\Collection {#1471 ▼ // app\Http\Controllers\SampleCrudController.php:60
+  #items: array:3 [▼
+    0 => "http://laravel-starter.test/storage/2023/08/cover/foto-red.png"
+    1 => "http://laravel-starter.test/storage/2023/08/cover/foto-blue.jpg"
+  ]
+  #escapeWhenCastingToString: false
+}
 
 ```
 
