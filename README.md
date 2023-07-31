@@ -4,7 +4,7 @@
 1. Generate Path Folder Storage otomatis sesuai format tahun/bulan/ , tujuannya biar gampang aja nanti backup sesuai custom per tahun/bulan
 2. Bisa Compress Gambar
 3. Generate Thumbnail
-4. Multiple Upload
+4. Multiple Upload 
 5. Akses File Gampang, Tidak perlu buat Relasi antar Model
 6. Lebih Mudah Jika ada perubahan relasi file untuk one to one / one to Many  
 7. Bisa Langsung Chaining Method dari Model (Pake Trait)
