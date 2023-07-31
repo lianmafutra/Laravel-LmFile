@@ -37,3 +37,17 @@ use Illuminate\Http\Request;
 ...
 }
 ```
+
+## Multiple Upload ? Dont Worry
+```php
+ $user->addFile($request->file_profile)
+         ->field("file_profile") 
+         ->path("profile") 
+         ->compress(60) 
+         ->withThumb(100) 
+         ->multiple()
+         ->upload(); 
+
+```
+
+
