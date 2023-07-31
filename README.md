@@ -12,7 +12,7 @@
 9. ....? Wait
 
 
-## Using in Model with Trait
+## Use Trait in Model
 
 ```php
 <?php
