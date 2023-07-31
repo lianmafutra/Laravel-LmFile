@@ -66,16 +66,16 @@ use Illuminate\Http\Request;
 
 
 //Access File Original
-User::find(auth()->user()->id)->field('foto')->getFile()
+User::find(auth()->user()->id)->field('file_profile')->getFile()
 // http://laravel-starter.test/storage/2023/08/profile/fotoku.png
 
 // Access Thumbnail
-User::find(auth()->user()->id)->field('foto')->getThumb()
+User::find(auth()->user()->id)->field('file_profile')->getThumb()
 // http://laravel-starter.test/storage/2023/08/profile/fotoku-thumb.png
 
 // Access Multiple
-User::find(auth()->user()->id)->field('foto')->getThumbs()
-User::find(auth()->user()->id)->field('foto')->getFiles()
+User::find(auth()->user()->id)->field('file_profile')->getThumbs()
+User::find(auth()->user()->id)->field('file_profile')->getFiles()
 
 /* #items: array:3 [▼
     0 => "http://laravel-starter.test/storage/2023/08/cover/foto-red.png"
@@ -86,10 +86,10 @@ User::find(auth()->user()->id)->field('foto')->getFiles()
 //Access File With Attribute Model File, only add 'Attribute' name method 
 
 //Access File Original
-User::find(auth()->user()->id)->field('foto')->getFileAttribute() //single
-User::find(auth()->user()->id)->field('foto')->getFilesAttribute() //multiple
-User::find(auth()->user()->id)->field('foto')->getThumbAttribute() //single
-User::find(auth()->user()->id)->field('foto')->getThumbsAttribute() //multiple
+User::find(auth()->user()->id)->field('file_profile')->getFileAttribute() //single
+User::find(auth()->user()->id)->field('file_profile')->getFilesAttribute() //multiple
+User::find(auth()->user()->id)->field('file_profile')->getThumbAttribute() //single
+User::find(auth()->user()->id)->field('file_profile')->getThumbsAttribute() //multiple
 
 /*
 #attributes: array:14 [▼
