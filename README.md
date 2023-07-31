@@ -1,5 +1,13 @@
 # Laravel-LmFile
-Laravel Easy Upload Using Trait on Model
+( Upload File Gak Pake Ribet, Males setting2 tiap new project ya udah buat kayak gini aja)
+
+1. Generate Path Folder Storage otomatis sesuai format tahun/bulan/file
+2. Bisa Compress Gambar
+3. Generate Thumbnail
+4. Multiple Upload
+5. Bisa Langsung Chaining Method dari Model (Pake Trait)
+6. 
+
 
 ## Using in Model with Trait
 
@@ -38,14 +46,14 @@ use Illuminate\Http\Request;
 }
 ```
 
-## Multiple Upload ? Dont Worry
+## Multiple Upload
 ```php
  $user->addFile($request->file_profile)
          ->field("file_profile") 
          ->path("profile") 
          ->compress(60) 
          ->withThumb(100) 
-         ->multiple()
+         ->multiple() //only add this method, dont forget form input with array file value 
          ->upload(); 
 
 ```
