@@ -13,7 +13,7 @@
 10. Sementara baru untuk upload, update file masih dalam proses...
 
 # Requirement
-install package "intervention/image" , untuk generate thumbnail dan compress gambar
+Install package "intervention/image" , untuk generate thumbnail dan compress gambar
 https://image.intervention.io/v2/introduction/installation
 
 ## Use Trait in Model
