@@ -58,4 +58,18 @@ use Illuminate\Http\Request;
 
 ```
 
+## Access File
+```php
+// Access Thumbnail
+User::find(auth()->user()->id)->field('foto')->getThumb()
+// http://laravel-starter.test/storage/2023/08/profile/fotoku-thumb.png
+
+//Access File Original
+User::find(auth()->user()->id)->field('foto')->getFile()
+
+// http://laravel-starter.test/storage/2023/08/profile/fotoku.png
+
+```
+
+
 
