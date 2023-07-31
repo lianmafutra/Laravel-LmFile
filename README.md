@@ -10,7 +10,7 @@
 7. Bisa Langsung Chaining Method dari Model (Pake Trait)
 8. Semua data file akan disimpan dalam satu tabel "file"
 9. ....? Wait
-10. untuk update file masih dalam proses...
+10. Sementara baru untuk upload, update file masih dalam proses...
 
 # Requirement
 install package "intervention/image" , untuk generate thumbnail dan compress gambar
