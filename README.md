@@ -12,6 +12,9 @@
 9. ....? Wait
 10. untuk update file masih dalam proses...
 
+# Requirement
+install package "intervention/image" , untuk generate thumbnail dan compress gambar
+https://image.intervention.io/v2/introduction/installation
 
 ## Use Trait in Model
 
