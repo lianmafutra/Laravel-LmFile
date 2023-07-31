@@ -77,7 +77,7 @@ trait LmFileTrait
       $path        = storage_path('app/public/' . $custom_path);
 
       if (!FacadesFile::isDirectory($path)) {
-         FacadesFile::makeDirectory($path, 0777, true, true);
+         FacadesFile::makeDirectory($path, 0755, true, true);
       }
       return $custom_path;
    }
