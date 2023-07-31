@@ -15,3 +15,24 @@ class User extends Authenticatable
 }
 
 ```
+
+## Using for Upload file
+
+```php
+<?php
+namespace App\Http\Controllers;
+use App\Models\User;
+use Illuminate\Http\Request;
+
+ public function store(UserRequest $request)
+   {
+
+  $user->addFile($request->file_profile)
+         ->field("file_profile") // name field/coloumn in table Database 
+         ->path("profile") // path store file in storage 
+         ->compress(60) // compress Quality Image
+         ->withThumb(100) //store file thumbnail with size ratio
+         ->upload(); //store file and save to Database
+...
+}
+```
