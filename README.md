@@ -1,7 +1,7 @@
 # Laravel-LmFile
 (Under Development)
 
-1. Generate Path Folder Storage otomatis sesuai format tahun/bulan/file , tujuannya biar gampang aja nanti backup sesuai custom per tahun/bulan
+1. Generate Path Folder Storage otomatis sesuai format tahun/bulan/ , tujuannya biar gampang aja nanti backup sesuai custom per tahun/bulan
 2. Bisa Compress Gambar
 3. Generate Thumbnail
 4. Multiple Upload
