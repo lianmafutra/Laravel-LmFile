@@ -39,7 +39,7 @@ use Illuminate\Http\Request;
    {
 
   $user = User::find(1);
-  $user->addFile($request->file_profile) // File Object Form Form Request
+  $user->addFile($request->file_profile) // File Object from Form Request
          ->field("file_profile") // name field/coloumn in table Database 
          ->path("profile") // path store file in storage 
          ->compress(60) // compress Quality Image
