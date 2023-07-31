@@ -60,13 +60,15 @@ use Illuminate\Http\Request;
 
 ## Access File
 ```php
-// Access Thumbnail
-User::find(auth()->user()->id)->field('foto')->getThumb()
-// http://laravel-starter.test/storage/2023/08/profile/fotoku-thumb.png
+
 
 //Access File Original
 User::find(auth()->user()->id)->field('foto')->getFile()
 // http://laravel-starter.test/storage/2023/08/profile/fotoku.png
+
+// Access Thumbnail
+User::find(auth()->user()->id)->field('foto')->getThumb()
+// http://laravel-starter.test/storage/2023/08/profile/fotoku-thumb.png
 
 // Access Multiple
 User::find(auth()->user()->id)->field('foto')->getThumbs()
@@ -78,6 +80,32 @@ User::find(auth()->user()->id)->field('foto')->getFiles()
  ]
 */
 
+//Access File With Attribute Model File, only add 'Attribute' name method 
+
+//Access File Original
+User::find(auth()->user()->id)->field('foto')->getFileAttribute() //single
+User::find(auth()->user()->id)->field('foto')->getFilesAttribute() //multiple
+User::find(auth()->user()->id)->field('foto')->getThumbAttribute() //single
+User::find(auth()->user()->id)->field('foto')->getThumbsAttribute() //multiple
+
+/*
+#attributes: array:14 [▼
+        "id" => 85
+        "file_id" => "6af85a0f-ef25-475c-b6e9-7fc05768cdd6"
+        "model_id" => 112277
+        "name_origin" => "fotoku.png"
+        "name_hash" => "logo-3-a717d3d0-1b1e-40e7-ba3c-d716bf7dc551-GeFsZqOfbod5dOGj7VaIr0zuCGxAjtrDWUZ51XOIkWZ1q5aXuI.png"
+        "path" => "2023/08/profile/"
+        "mime" => "image/png"
+        "size" => "8226"
+        "desc" => null
+        "order" => 1
+        "created_by" => 112277
+        "created_at" => "2023-08-01 00:14:08"
+        "updated_at" => "2023-08-01 00:14:08"
+        "full_path" => "http://laravel-starter.test/storage/2023/08/cover/fotoku.jpg"
+      ]
+*/
 ```
 
 
