@@ -5,8 +5,11 @@
 2. Bisa Compress Gambar
 3. Generate Thumbnail
 4. Multiple Upload
-5. Bisa Langsung Chaining Method dari Model (Pake Trait)
-6. ....? Wait
+5. Akses File Gampang, Tidak perlu buat Relasi antar Model
+6. Lebih Mudah Jika ada perubahan relasi file untuk one to one / one to Many  
+7. Bisa Langsung Chaining Method dari Model (Pake Trait)
+8. Cukup Satu Tabel Saja Untuk Menyimpan Seluruh Data File
+9. ....? Wait
 
 
 ## Using in Model with Trait
