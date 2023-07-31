@@ -10,6 +10,7 @@
 7. Bisa Langsung Chaining Method dari Model (Pake Trait)
 8. Cukup Satu Tabel Saja Untuk Menyimpan Seluruh Data File
 9. ....? Wait
+10. untuk update file masih dalam proses...
 
 
 ## Use Trait in Model
