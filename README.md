@@ -6,7 +6,7 @@
 3. Generate Thumbnail
 4. Multiple Upload
 5. Bisa Langsung Chaining Method dari Model (Pake Trait)
-6. 
+6. ....? Wait
 
 
 ## Using in Model with Trait
