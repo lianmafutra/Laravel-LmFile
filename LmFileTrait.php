@@ -87,10 +87,10 @@ trait LmFileTrait
       return $custom_path;
    }
 
-   public function filterExtension()
+   public function filterExtension($file)
    {
       // filter file by extension array value
-      if (!in_array($this->file->getClientOriginalExtension(), $this->extension)) {
+      if (!in_array($file->getClientOriginalExtension(), $this->extension)) {
          throw new Exception("Extension File not Allowed", 1);
       }
       return true;
@@ -101,13 +101,18 @@ trait LmFileTrait
       $file_uuid = Str::uuid();
       // store multiple file Array
       if ($this->multiple) {
+         
+         if(!is_array($this->file)) throw new Exception("File Type Must Array", 1);
+         
          foreach ($this->file as $key => $value) {
-            $this->filterExtension();
+            $this->filterExtension($value);
             $this->storeFileProcess($value, $key + 1,  $file_uuid);
          }
       } else {
+         if(is_array($this->file)) throw new Exception("Array File not supported", 1);
+         
          // store single file
-         $this->filterExtension();
+         $this->filterExtension($this->file);
          $this->storeFileProcess($this->file, 1, $file_uuid);
       }
    }
@@ -253,14 +258,14 @@ trait LmFileTrait
       $file = File::where('file_id',  $file_id)->where('model_id', $this->getModel()->id)->orderBy('order', 'ASC')->get();
       $file->map(function ($item) {
          // check thumbnail availbale or not , 
-         $exists = Storage::disk('public')->exists($this->searchThumb($item->path . $item->name_hash));
+         $exists = Storage::disk('public')->exists($item->path . $this->searchThumb($item->name_hash));
 
          if (!$exists) {
             // return default original 
             $item['full_path'] = url('storage/' . $item->path . $item->name_hash);
             return $item;
          }
-         
+
          // return default thumbnail 
          $addString = "-thumb";
          $fileInfo = pathinfo($item->name_hash);
