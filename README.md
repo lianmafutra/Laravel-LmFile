@@ -9,7 +9,7 @@
 6. Lebih Mudah Jika ada perubahan relasi file untuk one to one / one to Many  
 7. Bisa Langsung Chaining Method dari Model (Pake Trait)
 8. Semua data file akan disimpan dalam satu tabel "file"
-9. ....? Wait
+9. ....? Waiting
 
 # Requirement
 Install package Laravel "intervention/image" , untuk generate thumbnail dan compress gambar
