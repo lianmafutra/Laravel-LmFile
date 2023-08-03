@@ -30,7 +30,7 @@ class User extends Authenticatable
 
 ```
 
-## Using for Upload file
+## Using for Upload/Update file
 
 ```php
 <?php
@@ -48,6 +48,9 @@ use Illuminate\Http\Request;
          ->compress(60) // compress Quality Image
          ->withThumb(100) //store file thumbnail with size ratio
          ->storeFile(); //store file and save to Database
+
+   //for update file change method to
+   ->updateFile()
 ...
 }
 ```
@@ -60,7 +63,10 @@ use Illuminate\Http\Request;
          ->compress(60) 
          ->withThumb(100) 
          ->multiple() //only add this method, dont forget form input with array file value 
-         ->storeFile(); 
+         ->storeFile();
+
+ //for update file change method to
+   ->updateFile()
 
 ```
 
