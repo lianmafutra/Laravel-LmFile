@@ -44,7 +44,8 @@ use Illuminate\Http\Request;
   $user = User::find(1);
   $user->addFile($request->file_profile) // File Object from Form Request
          ->field("file_profile") // name field/coloumn in table Database 
-         ->path("profile") // path store file in storage 
+         ->path("profile") // path store file in storage
+         ->extension(['jpg', 'png']) // validation by extension 
          ->compress(60) // compress Quality Image
          ->withThumb(100) //store file thumbnail with size ratio
          ->storeFile(); //store file and save to Database
@@ -60,7 +61,8 @@ use Illuminate\Http\Request;
  $user->addFile($request->file_profile)
          ->field("file_profile") 
          ->path("profile") 
-         ->compress(60) 
+         ->compress(60)
+          ->extension(['jpg', 'png'])
          ->withThumb(100) 
          ->multiple() //only add this method, dont forget form input with array file value 
          ->storeFile();
