@@ -47,7 +47,7 @@ use Illuminate\Http\Request;
          ->path("profile") // path store file in storage 
          ->compress(60) // compress Quality Image
          ->withThumb(100) //store file thumbnail with size ratio
-         ->upload(); //store file and save to Database
+         ->storeFile(); //store file and save to Database
 ...
 }
 ```
@@ -60,7 +60,7 @@ use Illuminate\Http\Request;
          ->compress(60) 
          ->withThumb(100) 
          ->multiple() //only add this method, dont forget form input with array file value 
-         ->upload(); 
+         ->storeFile(); 
 
 ```
 
